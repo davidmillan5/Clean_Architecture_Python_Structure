@@ -1,7 +1,7 @@
 from domain.model import User
-from infrastructure.drivenadapter.SQLiteRepository.SQLiteRepositoryAdapter import DatabaseAdapter
 
-class UserUseCase:
+
+class UserCase:
     def __init__(self, db_adapter):
         self.db_adapter = db_adapter
 
@@ -12,3 +12,6 @@ class UserUseCase:
 
     def get_user(self, user_id):
         return self.db_adapter.get_user_by_id(user_id)
+
+    def get_all_users(self):
+        return self.db_adapter.get_all_users()

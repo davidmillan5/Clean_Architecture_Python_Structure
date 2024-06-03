@@ -1,7 +1,6 @@
 import sqlite3
 from domain.model import User
 
-
 class DatabaseAdapter:
     def __init__(self, db_name):
         self.connection = sqlite3.connect(db_name)
